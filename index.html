@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sparsh NFC</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body class="dark-mode">
+  <header class="navbar">
+    <img src="sparsh-logo.png" alt="Sparsh Logo" class="logo" />
+    <h1>Sparsh NFC</h1>
+    <button id="toggleMode">🌓</button>
+  </header>
+
+  <main class="container">
+    <section class="profile">
+      <img src="profile.jpg" alt="Profile" class="profile-img" />
+      <h2>Utsav Patel</h2>
+      <p>Founder • NFC Tech</p>
+    </section>
+
+    <section class="contact-card">
+      <h3>📇 Digital Business Card</h3>
+      <ul>
+        <li>📞 +91-XXXXXXXXXX</li>
+        <li>✉️ utsav@sparshnfc.com</li>
+        <li>🌐 www.sparshnfc.com</li>
+        <li>📍 Surat, Gujarat</li>
+      </ul>
+
+      <a href="https://sparshnfc.com/profile/utsav" class="cta-button" target="_blank">✨ Tap or Scan</a>
+
+      <div id="qrcode" class="qr"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Sparsh NFC. All rights reserved.</p>
+  </footer>
+</body>
+</html>
