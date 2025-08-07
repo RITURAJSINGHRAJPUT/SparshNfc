@@ -4,204 +4,35 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sparsh NFC Card</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  <style>
-    /* ---- Base Styling ---- */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(145deg, #e8f0ff, #f3f7fb);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      animation: fadeIn 1.5s ease-in-out;
-    }
-
-    /* ---- Card Styling ---- */
-    .card {
-      background: #ffffffcc;
-      border-radius: 20px;
-      padding: 20px;
-      max-width: 400px;
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      backdrop-filter: blur(10px);
-      animation: slideUp 1.2s ease-out;
-    }
-
-    .card img {
-      width: 120px;
-      height: 120px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin-top: -60px;
-      border: 5px solid #ffffff;
-      animation: popIn 1s ease-out;
-    }
-
-    .name {
-      font-size: 1.6rem;
-      font-weight: bold;
-      color: #2c3e50;
-      margin-top: 10px;
-      animation: slideFade 1.2s ease;
-    }
-
-    .title {
-      color: #7f8c8d;
-      margin-bottom: 20px;
-      animation: slideFade 1.4s ease;
-    }
-
-    .buttons {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin-bottom: 20px;
-    }
-
-    .buttons a {
-      background: #3498db;
-      color: white;
-      padding: 12px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-size: 18px;
-      transition: transform 0.3s ease;
-    }
-
-    .buttons a:hover {
-      transform: scale(1.1);
-    }
-
-    .save-btn {
-      background: #2ecc71;
-      color: white;
-      padding: 12px 30px;
-      border-radius: 25px;
-      border: none;
-      font-size: 16px;
-      cursor: pointer;
-      margin-bottom: 20px;
-      transition: all 0.3s ease;
-    }
-
-    .save-btn:hover {
-      background: #27ae60;
-      transform: scale(1.05);
-    }
-
-    .social-icons {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .social-icons a {
-      background: #ecf0f1;
-      padding: 10px;
-      border-radius: 12px;
-      font-size: 20px;
-      color: #2c3e50;
-      width: 48px;
-      height: 48px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: transform 0.3s ease, background 0.3s ease;
-    }
-
-    .social-icons a:hover {
-      background: #d0dce6;
-      transform: scale(1.1);
-    }
-
-    @media (max-width: 500px) {
-      .card {
-        margin: 10px;
-      }
-    }
-
-    /* ---- Animations ---- */
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes slideUp {
-      from {
-        transform: translateY(40px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-
-    @keyframes slideFade {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes popIn {
-      0% { transform: scale(0.8); opacity: 0; }
-      100% { transform: scale(1); opacity: 1; }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="card">
-    <img src="1.png" alt="Profile Picture">
-    <div class="name">Sparsh Digital Business Card</div>
-    <div class="title">Product Designer</div>
-
-    <div class="buttons">
-      <a href="mailto:email@example.com"><i class="fas fa-envelope"></i></a>
-      <a href="tel:+917990201438"><i class="fas fa-phone"></i></a>
-      <a href="#" onclick="showQR()"><i class="fas fa-qrcode"></i></a>
+  <div class="card-container">
+    <div class="banner">
+      <img src="1.png" alt="Profile" class="profile-img">
     </div>
+    
+    <div class="card-content">
+      <h2 class="name">Utsav Singh</h2>
+      <p class="designation">Tech Enthusiast | Product Designer</p>
 
-    <button class="save-btn" onclick="downloadVCF()">Save Contact</button>
+      <div class="contact-icons">
+        <a href="mailto:your@email.com"><i class="fas fa-envelope"></i></a>
+        <a href="tel:+919999999999"><i class="fas fa-phone"></i></a>
+        <a href="#"><i class="fas fa-map-marker-alt"></i></a>
+      </div>
 
-    <div class="social-icons">
-      <a href="#"><i class="fab fa-whatsapp"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-discord"></i></a>
-      <a href="#"><i class="fab fa-telegram"></i></a>
+      <button class="save-btn">Save Contact</button>
+
+      <div class="social-links">
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384053.png" alt="WhatsApp"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Discord"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968804.png" alt="Telegram"></a>
+      </div>
     </div>
   </div>
-
-  <script>
-    function downloadVCF() {
-      const vcfData = `BEGIN:VCARD
-VERSION:3.0
-FN:Utsav Singh
-TEL:+917990201438
-EMAIL:rajputrituraj03@gmail.com
-ORG:Sparsh NFC
-TITLE:Product Designer
-END:VCARD`;
-
-      const blob = new Blob([vcfData], { type: "text/vcard" });
-      const link = document.createElement("a");
-      link.href = URL.createObjectURL(blob);
-      link.download = "sparsh_nfc_contact.vcf";
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    }
-
-    function showQR() {
-      window.open("https://api.qrserver.com/v1/create-qr-code/?data=https://sparshnfc.com&size=200x200", "_blank");
-    }
-  </script>
 </body>
 </html>
