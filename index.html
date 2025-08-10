@@ -1,80 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Under Construction | Sparsh NFC</title>
-  <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ready to Launch | Sparsh NFC</title>
+<style>
     body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #5e60ce, #7400b8);
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-      padding: 20px;
-    }
-
-    .container {
-      animation: fadeIn 1.5s ease-in-out;
-      max-width: 600px;
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100vh;
+        overflow: hidden;
+        text-align: center;
     }
 
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
+        font-size: 3rem;
+        animation: fadeInUp 1.5s ease-out forwards;
+        opacity: 0;
     }
 
     p {
-      font-size: 1.1rem;
-      opacity: 0.9;
-      margin-bottom: 20px;
+        font-size: 1.2rem;
+        margin: 10px 0 20px;
+        animation: fadeInUp 2s ease-out forwards;
+        opacity: 0;
     }
 
-    .loader {
-      width: 50px;
-      height: 50px;
-      border: 4px solid rgba(255, 255, 255, 0.3);
-      border-top: 4px solid white;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-      margin: 20px auto;
+    .rocket {
+        font-size: 4rem;
+        animation: rocketUp 3s ease-in-out infinite;
+    }
+
+    @keyframes fadeInUp {
+        0% {opacity: 0; transform: translateY(20px);}
+        100% {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes rocketUp {
+        0% {transform: translateY(0);}
+        50% {transform: translateY(-15px);}
+        100% {transform: translateY(0);}
     }
 
     footer {
-      font-size: 0.9rem;
-      opacity: 0.7;
-      margin-top: 20px;
+        position: absolute;
+        bottom: 15px;
+        font-size: 0.9rem;
+        opacity: 0.8;
     }
 
-    @keyframes spin {
-      to { transform: rotate(360deg); }
+    @media (max-width: 768px) {
+        h1 {font-size: 2rem;}
+        p {font-size: 1rem;}
+        .rocket {font-size: 3rem;}
     }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2rem;
-      }
-      p {
-        font-size: 1rem;
-      }
-    }
-  </style>
+</style>
 </head>
 <body>
-  <div class="container">
-    <h1>🚧 Under Construction 🚧</h1>
-    <p>We’re working hard to bring you something amazing. Stay tuned for the new Sparsh NFC experience!</p>
-    <div class="loader"></div>
-    <footer>© 2025 Sparsh NFC | All Rights Reserved</footer>
-  </div>
+
+    <div class="rocket">🚀</div>
+    <h1>We’re Ready to Launch!</h1>
+    <p>Our brand-new website is almost here. Stay tuned for something amazing.</p>
+
+    <footer>© 2025 Sparsh NFC. All rights reserved.</footer>
+
 </body>
 </html>
